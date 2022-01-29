@@ -10,7 +10,7 @@ function App() {
     const [tasksRemaining, setTasksRemaining] = useState(0);
     const [tasks, setTasks] = useState([]);
 
-    useEffect(() => { setTasksRemaining(tasks.filter(task => !task.completed).length) });
+    useEffect(() => { setTasksRemaining(tasks.filter(task => !task.completed).length) },[tasks]);
 
 
     const addTask = title => {
